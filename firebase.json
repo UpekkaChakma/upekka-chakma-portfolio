@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "upekka-chakma-portfolio",
     "public": "build",
     "ignore": [
       "firebase.json",
