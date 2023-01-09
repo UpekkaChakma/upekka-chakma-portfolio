@@ -12,11 +12,11 @@ const Projects = () => {
         <div>
             <NavbarPage></NavbarPage>
             <MDBContainer fluid className="background">
-            <MDBTypography tag="h2" colorText="white"
+                <MDBTypography tag="h2" colorText="white"
                     className="text-center mb-4 p-2 "
                     style={{ fontWeight: "700" }}>
                     My Projects
-            </MDBTypography>
+                </MDBTypography>
                 <MDBRow>
                     <MDBCol lg="4" sm="12" className="mb-4 d-flex justify-content-center align-items-center">
                         <MDBCard style={{ maxWidth: "22rem", backgroundColor: 'rgba(255,255,255,0.09)' }}>
@@ -34,13 +34,7 @@ const Projects = () => {
                             <MDBCardBody style={{ color: 'white' }}>
                                 <MDBCardTitle>Upex Automobile Care</MDBCardTitle>
                                 <MDBCardText style={{ color: 'white' }}>A full-stack react app about automobile services with authentication and, User-part Admin-part</MDBCardText>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">React.JS</MDBBadge>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">Node.JS</MDBBadge>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">Express.JS</MDBBadge>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">MongoDB</MDBBadge>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">Firebase</MDBBadge>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">Stripe.JS</MDBBadge>
-                                <MDBBadge style={{ padding: '5px', margin: '2px', }} color="light">MDB React</MDBBadge>
+
                             </MDBCardBody>
                         </MDBCard>
                     </MDBCol>
@@ -53,8 +47,8 @@ const Projects = () => {
                                     alt=""
                                 />
                                 <MDBMask className="flex-center">
-                                    <a rel="noreferrer" href="https://the-game-shop-upek.web.app" target="_blank"><MDBBtn style={{ borderRadius: '7px', fontSize: '13px', fontWeight: '700' }} color="dark" size="sm">Live Link</MDBBtn></a>
-                                    <a rel="noreferrer" href=" https://github.com/UpekkaChakma/the-game-shop-client" target="_blank"><MDBBtn style={{ borderRadius: '7px', fontSize: '13px', fontWeight: '700' }} color="dark" size="sm">Github Code</MDBBtn></a>
+                                    <a rel="noreferrer" href="https://the-game-shop-upek.web.app" target="_blank"><MDBBtn color="dark" size="sm" className='py-2 px-3 br-1'>Live Link</MDBBtn></a>
+                                    <a rel="noreferrer" href=" https://github.com/UpekkaChakma/the-game-shop-client" target="_blank"><MDBBtn className='py-2 px-3 br-1' color="dark" size="sm">Github Code</MDBBtn></a>
                                 </MDBMask>
                             </MDBView>
                             <MDBCardBody style={{ color: 'white' }}>

@@ -1,38 +1,348 @@
-.App {
-  text-align: center;
+.background {
+  background-color: #0d1d34;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.min-h-100vh {
+  min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.font-700 {
+  font-weight: 700 !important;
+}
+
+.font-600 {
+  font-weight: 600;
+}
+
+.font-500 {
+  font-weight: 500;
+}
+
+.font-400 {
+  font-weight: 400;
+}
+
+.font-300 {
+  font-weight: 300;
+}
+
+h2 {
+  font-size: clamp(2rem, 4.5vw, 6rem) !important;
+}
+
+/* h3 {
+  font-size: clamp(1.4rem, 1.5vw, 6rem) !important;
+} */
+
+
+h4 {
+  font-size: clamp(2rem, 5vw, 5rem) !important;
+}
+
+h5 {
+  font-size: clamp(1.4rem, 2.5vw, 5rem) !important;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+.aspect-ratio {
+  aspect-ratio: 1/1;
+}
+
+.gradient-color-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.gradient-1 {
+  background-image: linear-gradient(45deg, #00ccff, #d400d4);
+}
+
+.gradient-3 {
+  background-image: linear-gradient(45deg, orangered, white);
+}
+
+.gradient-4 {
+  background-image: linear-gradient(45deg, #00ccff, white);
+}
+
+.gradient-5 {
+  background-image: linear-gradient(45deg, yellow, white);
+}
+
+.gradient-6 {
+  background-image: linear-gradient(45deg, green, white);
+}
+
+.gradient-7 {
+  background-image: linear-gradient(45deg, rgb(81, 31, 31), rgb(246, 15, 53));
+}
+
+.gradient-8 {
+  background-image: linear-gradient(45deg, rgb(209, 24, 209), white);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+
+.fancy-borderRadius {
+  border-radius: 30% 70% 70% 30% / 30% 30% 60% 70%;
+  background: #ad5389;
+  background: -webkit-linear-gradient(to right,
+      #00ccff,
+      #ad5389);
+  background: linear-gradient(to right,
+      #00ccff,
+      #ad5389);
+}
+
+.box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  border: none;
+  padding: 4px;
+}
+
+.box::before {
+  position: absolute;
+  content: '';
+  width: 500px;
+  height: 500px;
+  background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+  animation: rotate-360deg 4s linear infinite;
+}
+
+.box::after {
+  position: absolute;
+  content: '';
+  width: 500px;
+  height: 500px;
+  background-image: conic-gradient(transparent, transparent, transparent, #d400d4);
+  animation: rotate-540deg 4s linear infinite;
+  transform: rotate(180deg);
+}
+
+.box span {
+  position: absolute;
+  inset: 2px;
+  border-radius: 6px;
+  background-color: #0a192f;
+  z-index: 5;
+}
+
+.box h3 {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 0;
+  color: #fff;
+  z-index: 8;
+}
+
+@keyframes rotate-360deg {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@keyframes rotate-540deg {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(540deg);
+  }
+}
+
+
+
+.waving-hand {
+  animation: waving 2s linear infinite;
+}
+
+@keyframes waving {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: bottom;
+  }
+
+  30% {
+    transform: rotate(-15deg);
+  }
+
+  60% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar .nav-item .nav-link {
+    margin-left: 0 !important;
+  }
+
+  #home {
+    align-items: center;
+    margin-top: 2rem !important;
+  }
+
+  #home h1 {
+    font-size: 30px;
+  }
+
+  #home h2 {
+    font-size: 20px;
+  }
+
+  #home h3 {
+    font-size: 20px;
+  }
+
+  .grid-order:nth-child(2) {
+    order: 10;
+  }
+}
+
+@media only screen and (max-width: 428px) {
+  #navbar {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important
+  }
+
+  .radius-14 {
+    border-radius: 8px !important;
+  }
+
+  .p-5 {
+    padding: 1rem !important;
+  }
+}
+
+
+
+.neumorphism {
+  border-radius: 18px;
+  background: #0a192f;
+  box-shadow: 20px 20px 63px #070c17,
+    -20px -20px 63px #152647;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.neumorphism-inner-shadow {
+  border-radius: 12px;
+  background: rgb(3, 21, 47);
+  box-shadow: inset 8px 8px 30px rgba(0, 0, 0, 0.3), inset -4px -4px 30px rgba(255, 255, 255, 0.08);
+  color: white;
+  border: none;
+  outline: none !important;
+  appearance: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.neumorphism-inner-shadow:focus {
+  box-shadow: 1px 1px 15px #00ccff, -1px -1px 15px #d400d4, inset 8px 8px 16px rgba(0, 0, 0, 0.3), inset -8px -8px 16px rgba(255, 255, 255, 0.05);
+}
+
+#neumorphism {
+  border-radius: 8px;
+  background: #0a192f;
+  box-shadow: 7px 7px 13px #060e1a,
+    -7px -7px 13px #0e2444;
+  border: none;
+  outline: none;
+  padding: 20px;
+  color: white;
+}
+
+
+
+
+
+
+
+
+.bg-white-gradient-2 {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  color: white;
+}
+
+.bg-white-gradient {
+  background-color: rgba(255, 255, 255, 0.06);
+  position: relative;
+  border-radius: 18px;
+  color: white;
+}
+
+.bg-white-gradient::after {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.04);
+  position: absolute;
+  inset: -9px;
+  border-radius: 24px;
+}
+
+.bg-white-gradient::before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.03);
+  position: absolute;
+  inset: -18px;
+  border-radius: 30px;
+}
+
+.brightness-1 {
+  filter: brightness(2);
+}
+
+
+
+.radius-14 {
+  border-radius: 14px;
+}
+
+
+
+.bg {
+  background-image: url('../src/Images/portfolio-6.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.pointer-none>* {
+  user-select: none;
+}
+
+.img-width {
+  width: clamp(50px, 5vw, 70px);
+}
+
+.p-n1 {
+  padding: 0px !important;
+  /* background-image: linear-gradient(45deg, black, white); */
+}
+
+/* .col-width {
+  width: clamp(155px, 15vw, 500px);
+} */
+
+.ap-0 {
+  appearance: none !important;
 }

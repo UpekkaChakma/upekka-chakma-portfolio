@@ -1,13 +1,25 @@
-.background{
-    background-color: rgba(10,25,47,255);
-    height: fit-content;
-    padding-top: 60px;
-    padding-bottom: 110px;
-}
-.none{
+.none {
     color: #50c9b3;
 }
-.about-me{
+
+.about-me {
     color: white;
     background-color: #3c998e;
+}
+
+.list-none {
+    list-style: none;
+}
+
+button {
+    appearance: none !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+input[data-autocompleted] {
+    background-color: transparent !important;
 }

@@ -11,27 +11,27 @@ const NavbarPage = () => {
         setIsOpen(!isOpen);
     }
     return (
-        <MDBNavbar style={{backgroundColor: 'rgba(10,25,47,255)'}} dark expand="md">
+        <MDBNavbar className="fixed-top px-5 background" dark expand="md" id="navbar">
             <MDBNavbarBrand>
-                <strong className="white-text">UPEX</strong>
+                <strong className="white-text font-400">Upekka</strong>
             </MDBNavbarBrand>
             <MDBNavbarToggler onClick={toggleCollapse} />
             <MDBCollapse id="navbarCollapse3" isOpen={isOpen} navbar>
                 <MDBNavbarNav className="d-flex align-items-center" right>
                     <MDBNavItem active>
-                        <MDBNavLink as={Link} to="/home" style={{fontWeight:'700'}} >Home</MDBNavLink>
+                        <MDBNavLink as={Link} to="/home" className="ml-5 px-3 px-1 rounded">Home</MDBNavLink>
                     </MDBNavItem>
                     <MDBNavItem >
-                        <MDBNavLink as={Link} to="/projects" style={{fontWeight:'700'}} >Projects</MDBNavLink>
+                        <MDBNavLink as={Link} to="/projects" className="ml-5 px-3 px-1 rounded">Projects</MDBNavLink>
                     </MDBNavItem>
                     <MDBNavItem >
-                        <MDBNavLink as={Link} to="/blog" style={{fontWeight:'700'}} >Blog</MDBNavLink>
+                        <MDBNavLink as={Link} to="/blog" className="ml-5 px-3 px-1 rounded">Blog</MDBNavLink>
                     </MDBNavItem>
                     <MDBNavItem >
-                        <MDBNavLink as={Link} to="/contactMe" style={{fontWeight:'700'}} >Contact</MDBNavLink>
+                        <MDBNavLink as={Link} to="/contactMe" className="ml-5 px-3 px-1 rounded">Contact</MDBNavLink>
                     </MDBNavItem>
                     <MDBNavItem >
-                        <MDBNavLink as={Link} to="/about" style={{fontWeight:'700'}}>About</MDBNavLink>
+                        <MDBNavLink as={Link} to="/about" className="ml-5 px-3 px-1 rounded">About</MDBNavLink>
                     </MDBNavItem>
                 </MDBNavbarNav>
             </MDBCollapse>
