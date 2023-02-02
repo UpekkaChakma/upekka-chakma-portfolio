@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBModal } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdbreact';
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import paperPlane from '../../Images/paper-plane.svg';
@@ -13,20 +13,18 @@ const FormPage = () => {
 
     const { register, handleSubmit } = useForm();
     const onSubmit = () => {
-        setModalIsOpen(true);
-        setIsDelivered(true)
-        // emailjs.sendForm('service_kvg7pws', 'template_8umhvnp', "contact-form", 'user_ScyhCf9d8rf5S4WX53aTb')
-        //     .then((result) => {
-        //         setModalIsOpen(true);
-        //         setIsDelivered(true)
-        //     })
-        //     .catch(error => {
-        //         setModalIsOpen(true);
-        //     });
+        emailjs.sendForm('service_kvg7pws', 'template_8umhvnp', "contact-form", 'user_ScyhCf9d8rf5S4WX53aTb')
+            .then((result) => {
+                setModalIsOpen(true);
+                setIsDelivered(true)
+            })
+            .catch(error => {
+                setModalIsOpen(true);
+            });
     }
 
     return (
-        <MDBContainer size="xl" className="px-3 my-3">
+        <MDBContainer size="xl" className="px-3 py-4 mb-5" id="contact">
 
             <Modal modalIsOpen={modalIsOpen}
                 setModalIsOpen={setModalIsOpen}
@@ -37,7 +35,7 @@ const FormPage = () => {
                 <h4 className="gradient-1 gradient-color-text font-600">Get In Touch</h4>
             </div>
             <MDBRow center>
-                <MDBCol size="11" md="5" className="p-3">
+                <MDBCol size="11" md="5" className="p-3 my-4">
                     <div className="bg-white-gradient h-100" style={{ minHeight: '390px' }}>
                         <iframe title="bangladesh-map" id="gmap_canvas" src="https://maps.google.com/maps?q=bangladesh&t=k&z=7&ie=UTF8&iwloc=&output=embed" frameBorder={0} className="w-100 h-100 radius-14">
                         </iframe>
@@ -57,7 +55,7 @@ const FormPage = () => {
                             type="email"
                             id="email"
                             spellCheck="false"
-                            className="neumorphism-inner-shadow p-4 mb-4 w-100"
+                            className="neumorphism-inner-shadow p-3 mb-3 w-100"
                         />
 
                         <label htmlFor="message">
@@ -69,16 +67,16 @@ const FormPage = () => {
                             name="message"
                             type="text"
                             id="message"
-                            rows={8}
+                            rows={7}
                             spellCheck="false"
                             className="neumorphism-inner-shadow p-3 w-100 mb-3">
                         </textarea>
 
                         <MDBBtn type="submit"
-                            className="text-capitalize w-100 p-3 font-700 rounded-pill"
+                            className="text-capitalize w-100 p-2 font-700 rounded-pill"
                             color="indigo radius-14" >
                             <h5 className="mb-0 font-500">
-                                Submit <img src={paperPlane} alt="paper-plane" style={{ width: "30px", marginBottom: '7px' }} />
+                                Submit <img src={paperPlane} alt="paper-plane" style={{ width: "24px", marginBottom: '7px' }} />
                             </h5>
                         </MDBBtn>
                     </form>

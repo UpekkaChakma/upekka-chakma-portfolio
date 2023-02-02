@@ -5,32 +5,30 @@ import React from 'react'
 
 const Technologies = () => {
     return (
-        <MDBContainer size="xl" className="p-3 pointer-none">
-
-
+        <MDBContainer size="xl" className="px-4 p-md-3 my-5 pointer-none" id="tools-and-tech">
             <MDBRow >
-                <MDBCol md="3" size="6" className='text-white p-3'>
-                    <div className="h-100 neumorphism p-3 d-flex flex-row justify-content-center align-items-center">
-                        <img className='radius-14 p-1 mr-2' src={svg.html5} alt="html-5" style={{ backgroundColor: 'rgba(305, 69, 0, 0.1)', width: '35%' }} />
+                <MDBCol md="3" size="6" className='text-white p-md-3 p-2'>
+                    <div className="h-100 neumorphism p-4 p-md-3 d-flex flex-row justify-content-center align-items-center">
+                        <img className='p-1' src={svg.html5} alt="html-5" style={{ width: "clamp(50px, 35%, 80px)" }} />
                         <h5 className='gradient-color-text gradient-3 font-600 mb-0'>HTML</h5>
                     </div>
                 </MDBCol>
-                <MDBCol md="3" size="6" className='text-white p-3'>
-                    <div className="h-100 neumorphism p-3 d-flex flex-row justify-content-center align-items-center">
-                        <img className='radius-14 p-1 mr-2' src={svg.css3} alt="css3" style={{ backgroundColor: 'rgba(305, 305, 305, 0.08)', width: '35%' }} />
+                <MDBCol md="3" size="6" className='text-white p-md-3 p-2'>
+                    <div className="h-100 neumorphism p-4 p-md-3 d-flex flex-row justify-content-center align-items-center">
+                        <img className='p-1' src={svg.css3} alt="css3" style={{ width: "clamp(50px, 35%, 80px)" }} />
                         <h5 className='gradient-color-text gradient-4 font-600 mb-0'>CSS</h5>
                     </div>
                 </MDBCol>
-                <MDBCol md="3" size="6" className='text-white p-3'>
-                    <div className="h-100 neumorphism p-3 d-flex flex-row justify-content-center align-items-center">
-                        <img src={svg.JS} alt="javascript" style={{ width: '30%' }} />
+                <MDBCol md="3" size="6" className='text-white p-md-3 p-2'>
+                    <div className="h-100 neumorphism p-4 p-md-3 d-flex flex-row justify-content-center align-items-center">
+                        <img src={svg.JS} alt="javascript" style={{ width: '25%' }} />
                         <h5 className='gradient-color-text gradient-5 font-600 mb-0 ml-1'>JavaScript</h5>
                     </div>
                 </MDBCol>
-                <MDBCol md="3" size="6" className='text-white p-3'>
-                    <div className="h-100 neumorphism p-3 d-flex flex-row justify-content-center align-items-center">
+                <MDBCol md="3" size="6" className='text-white p-md-3 p-2'>
+                    <div className="h-100 neumorphism p-4 p-md-3 d-flex flex-row justify-content-center align-items-center">
                         <h5 className='gradient-color-text gradient-6 font-600 mr-1 mb-0'>Node</h5>
-                        <img src={svg.Node} alt="css3" style={{ width: '30%' }} />
+                        <img src={svg.Node} alt="css3" style={{ width: '25%' }} />
                     </div>
                 </MDBCol>
             </MDBRow>
@@ -43,28 +41,28 @@ const Technologies = () => {
                         <div className="d-flex justify-content-center w-100">
                             <div className="d-flex flex-column justify-content-center align-items-center neumorphism px-3 pt-1 m-2">
                                 <img className='img-width p-1' src={svg.Tailwind} alt="Tailwind" />
-                                <h6 className="gradient-color-text gradient-4 text-center font-600 mt-3 mb-0">
+                                <h6 className="gradient-color-text gradient-4 text-center font-400 mt-3 mb-0">
                                     Tailwind
                                 </h6>
                             </div>
                             <div className="d-flex flex-column justify-content-center align-items-center neumorphism px-3 pt-1 m-2">
                                 <img className='img-width p-2' src={svg.bootstrap} alt="bootstrap" />
-                                <h6 className="gradient-color-text gradient-8 text-center font-600 mt-2">
+                                <h6 className="gradient-color-text gradient-8 text-center font-400 mt-2">
                                     Bootstrap
                                 </h6>
                             </div>
                         </div>
                     </MDBRow>
-                    <MDBRow className='p-3' sm="6">
-                        <div className="neumorphism p-2 d-flex flex-column w-100 w-100">
+                    <MDBRow className='px-5 py-2 pb-4 p-md-3' sm="6">
+                        <div className="neumorphism p-3 p-md-2 d-flex flex-column w-100 w-100">
                             <img className='mx-auto img-width' src={svg.ReactSvg} alt="React" />
                             <h6 className="gradient-color-text gradient-4 text-center mt-2 font-600">
                                 React
                             </h6>
                         </div>
                     </MDBRow>
-                    <MDBRow className='p-3'>
-                        <div className="neumorphism p-2 d-flex flex-column w-100">
+                    <MDBRow className='px-5 py-2 pb-4 p-md-3'>
+                        <div className="neumorphism p-3 p-md-2 d-flex flex-column w-100">
                             <img className='brightness-1 img-width p-2 mx-auto' src={svg.Redux} alt="Redux" />
                             <h6 className="gradient-color-text gradient-8 text-center mt-2 font-600">
                                 Redux
@@ -84,7 +82,7 @@ const Technologies = () => {
                 </MDBCol>
 
                 <MDBCol md="3" className='w-100'>
-                    <MDBRow className='p-3 '>
+                    <MDBRow className='px-5 py-2 pt-4 p-md-3'>
                         <div className="neumorphism py-2 d-flex flex-column w-100">
                             <img className='mx-auto img-width p-2 mr-1' src={svg.MongoDB} alt="MongoDB" />
                             <h6 className="gradient-color-text gradient-6 text-center font-600 mt-2">
@@ -93,7 +91,7 @@ const Technologies = () => {
                         </div>
                     </MDBRow>
 
-                    <MDBRow className='p-3 '>
+                    <MDBRow className='px-5 py-2 pb-4 p-md-3'>
                         <div className="neumorphism p-2 d-flex flex-column w-100">
                             <div className="d-flex flex-column justify-content-center align-items-center py-2">
                                 <h4 className='mb-0'>express</h4>
@@ -101,11 +99,11 @@ const Technologies = () => {
                             </div>
                         </div>
                     </MDBRow>
-                    <MDBRow className='p-3 '>
+                    <MDBRow className='p-2 p-md-3'>
                         <div className="d-flex justify-content-center w-100">
                             <div className="d-flex flex-column justify-content-center align-items-center neumorphism px-3 pt-2 m-2">
                                 <img className='img-width rounded-circle bg-white p-1' src={svg.Github} alt="Github" />
-                                <h6 className="text-white text-center font-600 mt-2">
+                                <h6 className="text-white text-center font-400 mt-2">
                                     GitHub
                                 </h6>
                             </div>
@@ -121,29 +119,29 @@ const Technologies = () => {
             </MDBRow>
 
             <MDBRow >
-                <MDBCol md="3" size="6" className='text-white p-3'>
-                    <div className="h-100 neumorphism p-3 d-flex flex-row justify-content-center align-items-center">
-                        <img className='' src={svg.Next} alt="Firebase" style={{ width: '50%' }} />
+                <MDBCol md="3" size="6" className='text-white p-md-3 p-2'>
+                    <div className="h-100 neumorphism p-4 p-md-3 d-flex flex-row justify-content-center align-items-center">
+                        <img src={svg.Next} alt="Firebase" style={{ width: 'clamp(90px, 5vw, 110px)' }} />
                     </div>
                 </MDBCol>
-                <MDBCol md="3" size="6" className='text-white p-3'>
-                    <div className="h-100 neumorphism p-3 d-flex flex-row justify-content-center align-items-center">
-                        <img className='radius-14 p-1' src={svg.Firebase} alt="Firebase" style={{ width: '30%' }} />
+                <MDBCol md="3" size="6" className='text-white p-md-3 p-2'>
+                    <div className="h-100 neumorphism p-4 p-md-3 d-flex flex-row justify-content-center align-items-center">
+                        <img className='radius-14 p-1' src={svg.Firebase} alt="Firebase" style={{ width: 'clamp(40px, 5vw, 110px)' }} />
                         <h5 className="gradient-color-text gradient-5 text-center font-600 mt-2">
                             Firebase
                         </h5>
                     </div>
                 </MDBCol>
-                <MDBCol md="3" size="6" className='text-white p-3'>
-                    <div className="h-100 neumorphism p-3 d-flex flex-row justify-content-center align-items-center mb-0">
-                        <img src={svg.Heroku} alt="Heroku" style={{ width: '25%' }} />
+                <MDBCol md="3" size="6" className='text-white p-md-3 p-2'>
+                    <div className="h-100 neumorphism p-4 p-md-3 d-flex flex-row justify-content-center align-items-center mb-0">
+                        <img src={svg.Heroku} alt="Heroku" style={{ width: 'clamp(30px, 4vw, 110px)' }} />
                         <h5 className='gradient-color-text gradient-8 font-600 mb-0 ml-2'>Heroku</h5>
                     </div>
                 </MDBCol>
-                <MDBCol md="3" size="6" className='text-white p-3'>
-                    <div className="neumorphism p-3 d-flex flex-row justify-content-center align-items-center h-100">
+                <MDBCol md="3" size="6" className='text-white p-md-3 p-2'>
+                    <div className="neumorphism p-4 p-md-3 d-flex flex-row justify-content-center align-items-center h-100">
                         <h5 className='font-white mr-1 mb-0'>Vercel</h5>
-                        <img className='radius-14 px-1 pb-2' src={svg.Vercel} alt="Vercel" style={{ width: '20%' }} />
+                        <img className='radius-14 px-1 pb-2' src={svg.Vercel} alt="Vercel" style={{ width: 'clamp(40px, 4.5vw, 110px)' }} />
                     </div>
                 </MDBCol>
             </MDBRow>

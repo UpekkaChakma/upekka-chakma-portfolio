@@ -15,6 +15,8 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import MyRecord from './Components/MyRecord/MyRecord';
 import Service from './Components/Services/Service';
+import LeftSidebar from './Components/Sidebar/LeftSidebar';
+import Page from './Components/Page';
 
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
@@ -24,9 +26,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/home">
-          <Home></Home>
-        </Route>
+        <Route path="/home" component={Page} />
         <Route path="/projects">
           <Projects></Projects>
         </Route>
@@ -39,9 +39,6 @@ function App() {
         <Route path="/about">
           <About></About>
         </Route>
-        <Route exact path="/">
-          <Home></Home>
-        </Route>
         <Route path="/tech">
           <Technologies />
         </Route>
@@ -49,8 +46,10 @@ function App() {
           <MyRecord />
         </Route>
         <Route path="/service">
-          <Service />
+          <LeftSidebar />
         </Route>
+
+        <Route exact path="/" component={Page} />
       </Switch>
     </Router>
   );

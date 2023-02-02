@@ -1,5 +1,5 @@
 .background {
-  background-color: #0d1d34;
+  background-color: rgb(13, 29, 52);
 }
 
 .min-h-100vh {
@@ -36,11 +36,11 @@ h2 {
 
 
 h4 {
-  font-size: clamp(2rem, 5vw, 5rem) !important;
+  font-size: clamp(2rem, 4vw, 5rem) !important;
 }
 
 h5 {
-  font-size: clamp(1.4rem, 2.5vw, 5rem) !important;
+  font-size: clamp(1.4rem, 2.3vw, 5rem) !important;
 }
 
 h6 {
@@ -55,6 +55,15 @@ h6 {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+
+.gradient-white {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.0005), white);
+}
+
+.gradient-white-2 {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.0005), white);
 }
 
 .gradient-1 {
@@ -240,7 +249,7 @@ h6 {
 
 
 .neumorphism {
-  border-radius: 18px;
+  border-radius: 15px;
   background: #0a192f;
   box-shadow: 20px 20px 63px #070c17,
     -20px -20px 63px #152647;
@@ -280,9 +289,7 @@ h6 {
 
 
 .bg-white-gradient-2 {
-  background-color: rgba(255, 255, 255, 0.06);
-  border-radius: 18px;
-  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .bg-white-gradient {
@@ -331,7 +338,7 @@ h6 {
 }
 
 .img-width {
-  width: clamp(50px, 5vw, 70px);
+  width: clamp(50px, 4vw, 70px);
 }
 
 .p-n1 {
@@ -346,3 +353,46 @@ h6 {
 .ap-0 {
   appearance: none !important;
 }
+
+/* body {
+  height: 100vh;
+  height: 100dvh;
+
+} */
+
+/* leftSidebar */
+.nav {
+  height: 100vh;
+  height: 100dvh;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  color: white;
+}
+
+.nav>.active div {
+  box-sizing: border-box;
+  transition: 150ms ease;
+  box-shadow: 0px 0px 5px white;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav {
+    width: 100%;
+    background-color: #0a192f;
+    top: 90%;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+
+  }
+}
+
+/* leftsidebar */

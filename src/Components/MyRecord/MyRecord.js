@@ -21,16 +21,16 @@ const MyRecord = () => {
         },
     ]
     return (
-        <MDBContainer breakpoint="xl" className='p-3'>
-            <MDBRow className='p-3 d-flex flex-column'>
+        <MDBContainer breakpoint="xl" className='p-3 vh-100 d-flex flex-column justify-content-center align-items-center'>
+            <MDBRow className='d-flex flex-column mb-md-5'>
                 <h4 className=" d-inline-block font-600 gradient-color-text gradient-1 text-center mx-auto" style={{ maxWidth: "430px" }}>Numbers</h4>
-                <h6 className="font-400 text-white text-center w-100 mx-auto lh-md my-3" style={{ maxWidth: "430px" }}>My Web Development Journey so far in numbers</h6>
-            </MDBRow>t
+                <h6 className="font-300 text-white text-center w-100 mx-auto lh-md my-3" style={{ maxWidth: "430px" }}>My Web Development Journey so far in numbers</h6>
+            </MDBRow>
             <MDBRow>
                 {
                     myRecords.map(record => (
-                        <MDBCol size="6" md="3" className='p-3'>
-                            <div className='mx-auto h-100 p-3 d-flex flex-column justify-content-center align-items-center aspect-ratio'>
+                        <MDBCol size="6" md="3" className=''>
+                            <div className='mx-auto h-100 p-3 d-flex flex-column align-items-center'>
                                 <h2 className="font-600 text-white">{record.number}</h2>
                                 <h6 className="font-400 text-center gradient-4 gradient-color-text">{record.details}</h6>
                             </div>
