@@ -2,7 +2,7 @@ const ConfigParticles = {
 
     "particles": {
         "number": {
-            "value": 22,
+            "value": 9,
             "density": {
                 "enable": true,
                 "value_area": 800

@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-scroll'
-import { BiHomeAlt } from "react-icons/bi";
-import { RiServiceLine } from "react-icons/ri";
-import { BsGrid1X2 } from "react-icons/bs";
-import { TbBrandJavascript, TbBoxMultiple9 } from "react-icons/tb";
-import { CiMail } from "react-icons/ci";
+import { RiServiceFill, RiHome5Fill } from "react-icons/ri";
+import { BsGrid1X2Fill, BsClockFill } from "react-icons/bs";
+import { DiJavascript1 } from "react-icons/di";
+import { MdEmail } from "react-icons/md";
+import { Tooltip as ReactTooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css'
 import "../../App.css"
 
 
@@ -13,34 +14,33 @@ const LeftSidebar = () => {
         {
             title: 'Home',
             link: "/",
-            Icon: BiHomeAlt
+            Icon: RiHome5Fill
         },
         {
             title: 'Web dev journey',
             link: "web-dev-journey-in-numbers",
-            Icon: TbBoxMultiple9
-        },
-        {
-            title: 'Services',
-            link: "services",
-            Icon: RiServiceLine
+            Icon: BsClockFill
         },
         {
             title: 'Tools & technologies',
             link: "tools-and-tech",
-            Icon: TbBrandJavascript
+            Icon: DiJavascript1
         },
-
+        {
+            title: 'Services',
+            link: "services",
+            Icon: RiServiceFill
+        },
         {
             title: 'Projects',
             link: "projects",
-            Icon: BsGrid1X2,
+            Icon: BsGrid1X2Fill,
             size: '.8rem'
         },
         {
             title: 'Email Me',
             link: "contact",
-            Icon: CiMail
+            Icon: MdEmail
         }
     ]
     return (
@@ -49,6 +49,7 @@ const LeftSidebar = () => {
             {
                 sidenavLinks.map(({ title, link, Icon, size }) =>
                     <Link key={title}
+                        id={title}
                         activeClass="active"
                         to={link}
                         spy={true}
@@ -60,6 +61,7 @@ const LeftSidebar = () => {
                                 <Icon style={{ fontSize: size ? size : '1.2rem' }} />
                             </h5>
                         </div>
+                        <ReactTooltip anchorId={title} content={title} place="right" variant="info" />
                     </Link>
                 )
             }
