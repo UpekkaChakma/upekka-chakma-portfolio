@@ -21,7 +21,7 @@ const MyRecord = () => {
         },
     ]
     return (
-        <MDBContainer breakpoint="xl" className='p-3 vh-100 d-flex flex-column justify-content-center align-items-center'>
+        <MDBContainer breakpoint="xl" className='p-3 vh-100 d-flex flex-column justify-content-center align-items-center' id='web-dev-journey-in-numbers'>
             <MDBRow className='d-flex flex-column mb-md-5'>
                 <div className="d-flex justify-content-center ">
                     <div className="d-inline-block">

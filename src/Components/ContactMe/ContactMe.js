@@ -47,8 +47,8 @@ const FormPage = () => {
             <MDBRow center>
                 <MDBCol size="11" md="5" className="neumorphism mt-2 mb-3 d-none d-md-block">
                     <div className="py-3 h-100" >
-                        <iframe title="bangladesh-map" id="gmap_canvas" src="https://maps.google.com/maps?q=bangladesh&t=k&z=7&ie=UTF8&iwloc=&output=embed" frameBorder={0} className="w-100 h-100 radius-8p">
-                        </iframe>
+                        {/* <iframe title="bangladesh-map" id="gmap_canvas" src="https://maps.google.com/maps?q=bangladesh&t=k&z=7&ie=UTF8&iwloc=&output=embed" frameBorder={0} className="w-100 h-100 radius-8p">
+                        </iframe> */}
                     </div>
                 </MDBCol>
 

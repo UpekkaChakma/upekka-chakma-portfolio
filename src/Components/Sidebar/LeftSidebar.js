@@ -13,11 +13,11 @@ const LeftSidebar = () => {
     const sidenavLinks = [
         {
             title: 'Home',
-            link: "/",
+            link: "go-home",
             Icon: RiHome5Fill
         },
         {
-            title: 'Web dev journey',
+            title: 'My Record',
             link: "web-dev-journey-in-numbers",
             Icon: BsClockFill
         },
@@ -28,7 +28,7 @@ const LeftSidebar = () => {
         },
         {
             title: 'Services',
-            link: "services",
+            link: "my-services",
             Icon: RiServiceFill
         },
         {
@@ -54,9 +54,9 @@ const LeftSidebar = () => {
                         to={link}
                         spy={true}
                         smooth={true}
-                        duration={500}
+                        duration={700}
                     >
-                        <div className="rounded-circle bg-white-gradient-2 my-2 p-3 d-flex justify-content-center align-items-center" style={{ width: '25px', height: '25px' }}>
+                        <div className="rounded-circle bg-white-gradient-2 my-2 p-3 d-flex justify-content-center align-items-center nav-child" style={{ width: '25px', height: '25px' }}>
                             <h5 className="pt-1" >
                                 <Icon style={{ fontSize: size ? size : '1.2rem' }} />
                             </h5>
