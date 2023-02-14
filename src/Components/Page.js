@@ -4,7 +4,7 @@ import ConfigParticles from './Config/ConfigParticles';
 import MyRecord from './MyRecord/MyRecord';
 import Service from './Services/Service';
 import ContactMe from './ContactMe/ContactMe';
-import About from './About/About';
+import Projects from './Projects/Projects';
 import Home from './Home/Home';
 import LeftSidebar from './Sidebar/LeftSidebar';
 import RightSidebar from './Sidebar/RightSidebar';
@@ -24,10 +24,11 @@ const Page = () => {
                 <MyRecord />
                 <Technologies />
                 <Service />
+                <Projects />
                 <ContactMe />
             </div>
         </div>
     );
 };
 
-export default Page;
+export default Page;  

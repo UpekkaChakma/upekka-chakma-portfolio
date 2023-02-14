@@ -31,7 +31,8 @@ const RightSidebar = () => {
             {
                 sidenavLinks.map(({ title, href, Icon, size }) =>
                     <Link key={title}
-                        to={href}
+                        to={{ pathname: href }}
+                        target="_blank"
                     >
                         <h5 className="text-white my-2" >
                             <Icon style={{ fontSize: size ? size : '1.3rem' }} />

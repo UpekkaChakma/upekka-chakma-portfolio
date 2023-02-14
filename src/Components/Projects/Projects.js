@@ -1,116 +1,46 @@
 import React from 'react';
-import './Projects.css';
-import { MDBBadge, MDBBtn, MDBCard, MDBCardBody, MDBCardText, MDBCardTitle, MDBCol, MDBContainer, MDBIcon, MDBMask, MDBRow, MDBTypography, MDBView } from 'mdbreact';
-import autoMobile from '../../Images/automobile-service.JPG';
-import gameShop from '../../Images/gameshop.JPG';
-import epl from '../../Images/Epl-football-clubs.JPG';
-import chelseafc from '../../Images/chelsea-players-salary.JPG';
-import NavbarPage from '../Navbar/NavbarPage';
+import {
+    MDBCol, MDBContainer, MDBRow,
+} from "mdbreact";
+import Carousel from './Carousel';
+import { projectGameShop, projectJewelleryShop, projectAddToCart, projectPlanDesign, projectPlanAndDesign } from './assets';
+import { Fade, Flip } from 'react-reveal';
 
-const Projects = () => {
+const About = () => {
     return (
-        <div>
-            <NavbarPage></NavbarPage>
-            <MDBContainer fluid className="background">
-                <MDBTypography tag="h2" colorText="white"
-                    className="text-center mb-4 p-2 "
-                    style={{ fontWeight: "700" }}>
-                    My Projects
-                </MDBTypography>
-                <MDBRow>
-                    <MDBCol lg="4" sm="12" className="mb-4 d-flex justify-content-center align-items-center">
-                        <MDBCard style={{ maxWidth: "22rem", backgroundColor: 'rgba(255,255,255,0.09)' }}>
-                            <MDBView hover zoom>
-                                <img
-                                    src={autoMobile}
-                                    className="img-fluid"
-                                    alt=""
-                                />
-                                <MDBMask className="flex-center">
-                                    <a rel="noreferrer" href="https://upex-auto-mobile-care.web.app" target="_blank"><MDBBtn style={{ borderRadius: '7px', fontSize: '13px', fontWeight: '700' }} color="dark" size="sm">Live Link</MDBBtn></a>
-                                    <a rel="noreferrer" href="https://github.com/UpekkaChakma/upex-automobile-care-client" target="_blank"><MDBBtn style={{ borderRadius: '7px', fontSize: '13px', fontWeight: '700' }} color="dark" size="sm">Github Code</MDBBtn></a>
-                                </MDBMask>
-                            </MDBView>
-                            <MDBCardBody style={{ color: 'white' }}>
-                                <MDBCardTitle>Upex Automobile Care</MDBCardTitle>
-                                <MDBCardText style={{ color: 'white' }}>A full-stack react app about automobile services with authentication and, User-part Admin-part</MDBCardText>
-
-                            </MDBCardBody>
-                        </MDBCard>
-                    </MDBCol>
-                    <MDBCol lg="4" sm="12" className="mb-4 d-flex justify-content-center align-items-center">
-                        <MDBCard style={{ maxWidth: "22rem", backgroundColor: 'rgba(255,255,255,0.09)' }}>
-                            <MDBView hover zoom>
-                                <img
-                                    src={gameShop}
-                                    className="img-fluid"
-                                    alt=""
-                                />
-                                <MDBMask className="flex-center">
-                                    <a rel="noreferrer" href="https://the-game-shop-upek.web.app" target="_blank"><MDBBtn color="dark" size="sm" className='py-2 px-3 br-1'>Live Link</MDBBtn></a>
-                                    <a rel="noreferrer" href=" https://github.com/UpekkaChakma/the-game-shop-client" target="_blank"><MDBBtn className='py-2 px-3 br-1' color="dark" size="sm">Github Code</MDBBtn></a>
-                                </MDBMask>
-                            </MDBView>
-                            <MDBCardBody style={{ color: 'white' }}>
-                                <MDBCardTitle>The Game Shop</MDBCardTitle>
-                                <MDBCardText style={{ color: 'white' }}>A full-stack react app about an online game services with authentication and, User can buy games, Admin can delete and add games, can see user info</MDBCardText>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">React.JS</MDBBadge>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">Node.JS</MDBBadge>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">Express.JS</MDBBadge>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">MongoDB</MDBBadge>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">Firebase</MDBBadge>
-                                <MDBBadge style={{ padding: '5px', margin: '2px', }} color="light">MDB React</MDBBadge>
-                            </MDBCardBody>
-                        </MDBCard>
-                    </MDBCol>
-                    <MDBCol lg="4" sm="12" className="mb-4 d-flex justify-content-center align-items-center">
-                        <MDBCard style={{ maxWidth: "22rem", backgroundColor: 'rgba(255,255,255,0.09)' }}>
-                            <MDBView hover zoom>
-                                <img
-                                    src={epl}
-                                    className="img-fluid"
-                                    alt=""
-                                />
-                                <MDBMask className="flex-center">
-                                    <a rel="noreferrer" href="https://gifted-dubinsky-973a12.netlify.app/" target="_blank"><MDBBtn style={{ borderRadius: '7px', fontSize: '13px', fontWeight: '700' }} color="dark" size="sm">Live Link</MDBBtn></a>
-                                    <a rel="noreferrer" href="https://github.com/Porgramming-Hero-web-course/English-Premier-League-Clubs" target="_blank"><MDBBtn style={{ borderRadius: '7px', fontSize: '13px', fontWeight: '700' }} color="dark" size="sm">Github Code</MDBBtn></a>
-                                </MDBMask>
-                            </MDBView>
-                            <MDBCardBody style={{ color: 'white' }}>
-                                <MDBCardTitle>English Premier League Clubs</MDBCardTitle>
-                                <MDBCardText style={{ color: 'white' }}>This project is built with React, react-bootstrap and css on english premier league clubs and their details from TheSportsDB api</MDBCardText>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">React.JS</MDBBadge>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">Netlify</MDBBadge>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">SportsDB Api</MDBBadge>
-                            </MDBCardBody>
-                        </MDBCard>
-                    </MDBCol>
-                    <MDBCol lg="4" sm="12" className="mb-4 d-flex justify-content-center align-items-center">
-                        <MDBCard style={{ maxWidth: "22rem", backgroundColor: 'rgba(255,255,255,0.09)' }}>
-                            <MDBView hover zoom>
-                                <img
-                                    src={chelseafc}
-                                    className="img-fluid"
-                                    alt=""
-                                />
-                                <MDBMask className="flex-center">
-                                    <a rel="noreferrer" href="https://vigilant-kare-87f331.netlify.app/" target="_blank"><MDBBtn style={{ borderRadius: '7px', fontSize: '13px', fontWeight: '700' }} color="dark" size="sm"><MDBIcon fab icon="github" /> Live Link</MDBBtn></a>
-                                    <a rel="noreferrer" href="https://github.com/Porgramming-Hero-web-course/simple-react-UpekkaChakma" target="_blank"><MDBBtn style={{ borderRadius: '7px', fontSize: '13px', fontWeight: '700' }} color="dark" size="sm">Github Code</MDBBtn></a>
-                                </MDBMask>
-                            </MDBView>
-                            <MDBCardBody style={{ color: 'white' }}>
-                                <MDBCardTitle>Chelsea club players salary</MDBCardTitle>
-                                <MDBCardText style={{ color: 'white' }}>This simple project is all about Chelseafc and players salary. By clicking individual players 'add salary' button u can find the total salary amount of the selected players</MDBCardText>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">React.JS</MDBBadge>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">Netlify</MDBBadge>
-                                <MDBBadge style={{ padding: '5px', margin: '2px' }} color="light">ES6</MDBBadge>
-                            </MDBCardBody>
-                        </MDBCard>
-                    </MDBCol>
-                </MDBRow>
-            </MDBContainer>
-        </div>
+        <MDBContainer size="xl" id="projects" className='my-5 py-5'>
+            <MDBRow className='d-flex flex-column mb-md-5'>
+                <Fade duration={6000}>
+                    <div className="d-flex justify-content-center ">
+                        <div className="d-inline-block">
+                            <h4 className="mx-auto mb-5 font-600 text-white z-100 position-relative">
+                                My Projects
+                                <h4 className="section-title-alt font-600">Works</h4>
+                            </h4>
+                        </div>
+                    </div>
+                </Fade>
+                <Flip top cascade delay={1500}>
+                    <h6 className="text-white text-center p-2 font-300">
+                        Best projects of mine are included here with 2 full-stack projects
+                    </h6>
+                </Flip>
+            </MDBRow>
+            <MDBRow center className='m-5 py-3 neumorphism'>
+                <MDBCol size="12" className='' >
+                    <Carousel props={projectGameShop} />
+                    <Carousel props={projectJewelleryShop} />
+                    <Carousel props={projectAddToCart} />
+                </MDBCol>
+                <MDBCol md="6" size="12" className='m-0 pr-md-0' >
+                    <Carousel props={projectPlanAndDesign} />
+                </MDBCol>
+                <MDBCol md="6" size="12" className='m-0 pl-md-0' >
+                    <Carousel props={projectPlanDesign} />
+                </MDBCol>
+            </MDBRow>
+        </MDBContainer>
     );
 };
 
-export default Projects;
+export default About;

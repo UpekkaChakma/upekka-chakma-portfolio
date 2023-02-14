@@ -53,7 +53,7 @@ const Service = () => {
 
     return (
         <MDBContainer breakpoint="xl" className='py-5 my-5' id='my-services'>
-            <Fade duration={2500}>
+            <Fade duration={6000}>
                 <div className="d-flex justify-content-center pt-5">
                     <div className="d-inline-block">
                         <h4 className="mx-auto mb-5 font-600 text-white z-100 position-relative">
@@ -63,12 +63,12 @@ const Service = () => {
                     </div>
                 </div>
             </Fade>
-            <Flip top cascade delay={500} duration={3000}>
+            <Flip top cascade delay={1000} duration={2000}>
                 <h6 className=" d-flex justify-content-center text-white text-center p-3 mb-4">
-                    <span className='gradient-color-text gradient-4 font-600 mr-1'>
+                    <span className='gradient-color-text gradient-4 mr-1 font-400'>
                         click
                     </span>
-                    <Flip top cascade duration={3000}>
+                    <Flip top cascade delay={1500} duration={3000}>
                         one of the boxes and see what happens
                     </Flip>
                 </h6>
@@ -81,7 +81,7 @@ const Service = () => {
                             className='p-1 m-2 d-flex flex-column justify-content-center align-items-center py-4 neumorphism'>
                             <Slide cascade bottom delay={delay} duration={400}>
                                 <Icon className={classList && classList} style={{ fontSize: "3rem", color: 'white' }} />
-                                <h5 className="text-white font-500 py-3">{serviceName}</h5>
+                                <h5 className="text-white font-400 py-3">{serviceName}</h5>
                             </Slide>
                             {/* <ul className='list-none'>
                     {
