@@ -6,7 +6,7 @@ import Carousel from './Carousel';
 import { projectGameShop, projectJewelleryShop, projectAddToCart, projectPlanDesign, projectPlanAndDesign } from './assets';
 import { Fade, Flip } from 'react-reveal';
 
-const About = () => {
+const Projects = () => {
     return (
         <MDBContainer size="xl" id="projects" className='my-5 py-5'>
             <MDBRow className='d-flex flex-column mb-md-5'>
@@ -26,7 +26,7 @@ const About = () => {
                     </h6>
                 </Flip>
             </MDBRow>
-            <MDBRow center className='m-5 py-3 neumorphism'>
+            <MDBRow center className='m-md-5 py-3 neumorphism'>
                 <MDBCol size="12" className='' >
                     <Carousel props={projectGameShop} />
                     <Carousel props={projectJewelleryShop} />
@@ -43,4 +43,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default Projects;

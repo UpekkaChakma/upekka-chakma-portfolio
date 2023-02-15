@@ -10,7 +10,6 @@ import { FiGithub } from 'react-icons/fi'
 import { Link } from 'react-router-dom';
 
 const Carousel = ({ props }) => {
-    console.log(props)
     return (
         <MDBContainer className='p-0'>
             <MDBCarousel
@@ -29,7 +28,7 @@ const Carousel = ({ props }) => {
                                         className="d-block w-100"
                                         src={item.img}
                                         alt="carousel-slide"
-                                        style={{ height: '430px', objectFit: 'cover' }}
+                                        style={{ height: '405px', objectFit: 'cover' }}
                                     />
                                     <MDBMask overlay="black-strong" />
                                 </MDBView>
@@ -37,12 +36,26 @@ const Carousel = ({ props }) => {
                                     <h2 className="font-500">{item.title && item.title}</h2>
                                     <h6 className="font-300 my-3" style={{ fontSize: '13px' }}>{item.secondTitle && item.secondTitle}</h6>
                                     <span className="d-flex justify-content-center">
+                                        {item.features &&
+                                            <ul className="">
+                                                {
+                                                    item.features.map(list => (
+                                                        <li className='my-3 px-1 d-flex align-items-start' style={{ textAlign: 'start' }}>
+                                                            <span className='mr-2 bg-white' style={{ height: '12px', width: '1px', marginTop: '5px' }}></span>
+                                                            {list}
+                                                        </li>
+                                                    ))
+                                                }
+                                            </ul>
+                                        }
+                                    </span>
+                                    <span className="d-flex justify-content-center">
                                         {item.hrefLive &&
                                             <Link
                                                 to={{ pathname: item.hrefLive }}
                                                 target="_blank"
                                             >
-                                                <h5 className="text-white mr-2" >
+                                                <h5 className="text-white mr-3" >
                                                     <RxLink1 />
                                                 </h5>
                                             </Link>}

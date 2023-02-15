@@ -146,9 +146,9 @@ const Technologies = () => {
                         </div>
                     </MDBRow>
                     <MDBRow className='pb-0 px-2 neumorphism '>
-                        <div className="p-3 d-flex flex-column w-100">
+                        <div className="p-1 d-flex flex-column w-100">
                             <Flip top delay={500}>
-                                <img className='img-width p-2 mx-auto' src={svg.Redux} alt="Redux" style={{ width: "clamp(40px, 24%, 80px)" }} />
+                                <img className='img-width p-2 mx-auto' src={svg.Redux} alt="Redux" style={{ width: "clamp(40px, 26%, 80px)" }} />
                                 <h6 className=" text-center mt-2 font-400">
                                     Redux
                                 </h6>
@@ -159,19 +159,17 @@ const Technologies = () => {
 
                 <MDBCol md="6" className='d-none d-md-block overflow-hidden neumorphism '>
                     <MDBRow className='h-100'>
-                        <Zoom>
-                            <div className=" p-5 bg d-flex justify-content-center align-items-center w-100" >
-                                <h4 className="gradient-color-text gradient-1 text-center font-700">
-                                    Tools and Technologies I have worked with
-                                </h4>
-                            </div>
-                        </Zoom>
+                        <div className=" p-5 bg d-flex justify-content-center align-items-center w-100" >
+                            <h4 className="gradient-color-text gradient-1 text-center font-700">
+                                Tools and Technologies I have worked with
+                            </h4>
+                        </div>
                     </MDBRow>
                 </MDBCol>
 
                 <MDBCol size="12" sm='5' md="3" className='w-100'>
-                    <MDBRow className=''>
-                        <div className="neumorphism py-2 d-flex flex-column w-100">
+                    <MDBRow>
+                        <div className="neumorphism py-3 py-md-2 d-flex flex-column w-100">
                             <Flip top>
                                 <img className='mx-auto img-width p-2 mr-1' src={svg.MongoDB} alt="MongoDB" />
                                 <h6 className="gradient-color-text gradient-6 text-center font-600 mt-2">
@@ -184,7 +182,7 @@ const Technologies = () => {
                     <MDBRow>
                         <div className="neumorphism px-2 py-1 d-flex flex-column w-100">
                             <Flip top delay={500}>
-                                <div className="d-flex flex-column justify-content-center align-items-center py-3">
+                                <div className="d-flex flex-column justify-content-center align-items-center py-3 py-md-2">
                                     <h4 className='mb-0'>express</h4>
                                     <h6>JS</h6>
                                 </div>

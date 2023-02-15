@@ -33,9 +33,9 @@ const projectGameShop = [
         id: 2,
         itemId: 2,
         img: gameShop2,
-        description: [],
-        hrefLive: "",
-        hrefGithub: ""
+        features: ['Fully functional frontend and backend with crud', 'Admin can create/update/delete game data', 'User can buy video-game', 'Can not if already purchased'],
+        hrefLive: "dg",
+        hrefGithub: "sjhs"
     },
     {
         id: 3,
@@ -60,16 +60,16 @@ const projectJewelleryShop = [
         img: jewelleryShop1,
         title: "Jewellery Shop",
         secondTitle: 'MERN Full Stack app',
-        hrefLive: "",
-        hrefGithub: ""
+        hrefLive: "ghh",
+        hrefGithub: "kjjh"
     },
     {
         id: 12,
         itemId: 2,
         img: jewelleryShop2,
-        description: [],
-        hrefLive: "",
-        hrefGithub: ""
+        features: ['Functional frontend with context api', 'Backend with sanity so CRUD is easier', 'User can add multiple items at the same time', 'Has payment system with Stripe'],
+        hrefLive: "jh",
+        hrefGithub: "jhhk"
     },
     {
         id: 13,
@@ -100,7 +100,7 @@ const projectAddToCart = [
     {
         id: 22,
         img: addToCart2,
-        description: [],
+        features: [],
         itemId: 2
     }
 ];
@@ -118,7 +118,7 @@ const projectPlanDesign = [
     {
         id: 32,
         img: planDesign2,
-        description: [],
+        features: [],
         itemId: 2
     }
 ];
