@@ -20,22 +20,26 @@ const Projects = () => {
                         </div>
                     </div>
                 </Fade>
-                <Flip top cascade delay={1500}>
+                <Flip top delay={1500}>
                     <h6 className="text-white text-center p-2 font-300">
                         Best projects of mine are included here with 2 full-stack projects
                     </h6>
                 </Flip>
             </MDBRow>
-            <MDBRow center className='m-md-5 py-3 neumorphism'>
-                <MDBCol size="12" className='' >
+            <MDBRow center className='px-2 py-4 neumorphism mx-md-5'>
+                <MDBCol size="12">
                     <Carousel props={projectGameShop} />
+                </MDBCol>
+                <MDBCol size="12" md='6' className='mt-4 mb-0'>
                     <Carousel props={projectJewelleryShop} />
+                </MDBCol>
+                <MDBCol size="12" md='6' className='mt-4 mb-0 pl-md-2'>
                     <Carousel props={projectAddToCart} />
                 </MDBCol>
-                <MDBCol md="6" size="12" className='m-0 pr-md-0' >
+                <MDBCol size="12" md='6' className='mt-4 mb-0'>
                     <Carousel props={projectPlanAndDesign} />
                 </MDBCol>
-                <MDBCol md="6" size="12" className='m-0 pl-md-0' >
+                <MDBCol size="12" md='6' className='mt-4 mb-0 pl-md-2'>
                     <Carousel props={projectPlanDesign} />
                 </MDBCol>
             </MDBRow>

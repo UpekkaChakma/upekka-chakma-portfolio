@@ -28,7 +28,7 @@ const Carousel = ({ props }) => {
                                         className="d-block w-100"
                                         src={item.img}
                                         alt="carousel-slide"
-                                        style={{ height: '405px', objectFit: 'cover' }}
+                                        style={{ height: '425px', objectFit: 'cover' }}
                                     />
                                     <MDBMask overlay="black-strong" />
                                 </MDBView>
@@ -41,7 +41,7 @@ const Carousel = ({ props }) => {
                                                 {
                                                     item.features.map(list => (
                                                         <li className='my-3 px-1 d-flex align-items-start' style={{ textAlign: 'start' }}>
-                                                            <span className='mr-2 bg-white' style={{ height: '12px', width: '1px', marginTop: '5px' }}></span>
+                                                            <span className='mr-2 bg-white' style={{ height: '13px', width: '1px', marginTop: '5px' }}></span>
                                                             {list}
                                                         </li>
                                                     ))

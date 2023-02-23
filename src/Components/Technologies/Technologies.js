@@ -4,7 +4,6 @@ import React from 'react';
 import Slide from 'react-reveal/Slide';
 import Bounce from 'react-reveal/Bounce';
 import Flip from 'react-reveal/Flip';
-import { Zoom } from 'react-reveal';
 
 const Technologies = () => {
 
@@ -86,7 +85,7 @@ const Technologies = () => {
                 <div className="d-inline-block">
                     <h4 className="mx-auto font-600 text-white text-center position-relative">
                         Technologies
-                        <h4 className="section-title-alt font-700">ToolsNTech</h4>
+                        <h4 className="section-title-alt font-700">Tools-Tech</h4>
                     </h4>
                     <h6 className="text-white text-center p-3 py-4 my-4">
                         I have good working knowledge on these languages and libraries.
@@ -149,7 +148,7 @@ const Technologies = () => {
                         <div className="p-1 d-flex flex-column w-100">
                             <Flip top delay={500}>
                                 <img className='img-width p-2 mx-auto' src={svg.Redux} alt="Redux" style={{ width: "clamp(40px, 26%, 80px)" }} />
-                                <h6 className=" text-center mt-2 font-400">
+                                <h6 className="gradient-color-text gradient-8 text-center mt-2 font-500">
                                     Redux
                                 </h6>
                             </Flip>

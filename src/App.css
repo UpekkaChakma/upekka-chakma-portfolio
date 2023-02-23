@@ -1,4 +1,4 @@
-/* general */
+/* general start, applies to all */
 .background {
   background-color: rgb(13, 29, 52);
 }
@@ -31,9 +31,9 @@ h2 {
   font-size: clamp(1.5rem, 2vw, 6rem) !important;
 }
 
-/* h3 {
-  font-size: clamp(1.4rem, 1.5vw, 6rem) !important;
-} */
+h3 {
+  font-size: clamp(1.1rem, 2.2vw, 6rem) !important;
+}
 
 
 h4 {
@@ -45,11 +45,19 @@ h5 {
 }
 
 h6 {
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.aspect-ratio {
+p {
+  font-size: 15px;
+}
+
+.aspect-ratio-1 {
   aspect-ratio: 1/1;
+}
+
+.object-cover {
+  object-fit: cover;
 }
 
 .gradient-color-text {
@@ -99,6 +107,10 @@ h6 {
   cursor: pointer;
 }
 
+.pointer-none>* {
+  user-select: none;
+}
+
 .section-title-alt {
   position: absolute;
   content: '';
@@ -112,12 +124,21 @@ h6 {
   background-image: linear-gradient(245deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.005));
 }
 
-/* general END applies to all */
+.neumorphism {
+  overflow: hidden;
+  border-radius: 10px !important;
+  background: #0a192f;
+  box-shadow: 20px 20px 63px #070c17,
+    -20px -20px 63px #152647;
+  color: white;
+}
+
+/* general END, applies to all */
 
 
 /* home start */
 
-.welcome {
+/* .welcome {
   position: absolute;
   content: '';
   top: 0;
@@ -137,85 +158,8 @@ h6 {
   background: linear-gradient(to right,
       #00ccff,
       #ad5389);
-}
-
-/* .box {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.4);
-  overflow: hidden;
-  border: none;
-  padding: 4px;
-}
-
-.box::before {
-  position: absolute;
-  content: '';
-  width: 500px;
-  height: 500px;
-  background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
-  animation: rotate-360deg 4s linear infinite;
-}
-
-.box::after {
-  position: absolute;
-  content: '';
-  width: 500px;
-  height: 500px;
-  background-image: conic-gradient(transparent, transparent, transparent, #d400d4);
-  animation: rotate-540deg 4s linear infinite;
-  transform: rotate(180deg);
-}
-
-.box span {
-  position: absolute;
-  inset: 2px;
-  border-radius: 2rem;
-  background-color: #0a192f;
-  z-index: 5;
-}
-
-.box h3 {
-  padding: 8px 18px;
-  font-size: 16px;
-  border-radius: 5px;
-  margin-bottom: 0;
-  color: #fff;
-  z-index: 8;
-}
-
-@keyframes rotate-360deg {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate-540deg {
-  0% {
-    transform: rotate(180deg);
-  }
-
-  100% {
-    transform: rotate(540deg);
-  }
 } */
 
-
-.neumorphism {
-  overflow: hidden;
-  border-radius: 10px;
-  background: #0a192f;
-  box-shadow: 20px 20px 63px #070c17,
-    -20px -20px 63px #152647;
-  color: white;
-}
 
 /* contact me section start */
 
@@ -288,51 +232,26 @@ textarea:focus {
 
 
 
-.radius-8p {
-  border-radius: 9px;
-}
-
-
-
+/* Technologies section start */
 .bg {
   background-image: url('../src/Images/portfolio-6.png');
   background-size: cover;
   background-position: center;
 }
 
-.pointer-none>* {
-  user-select: none;
-}
-
 .img-width {
   width: clamp(50px, 4vw, 70px);
 }
 
-.p-n1 {
-  padding: 0px !important;
-  /* background-image: linear-gradient(45deg, black, white); */
-}
+/* Technologies section end */
 
-/* .col-width {
-  width: clamp(155px, 15vw, 500px);
-} */
 
-.ap-0 {
-  appearance: none !important;
-}
 
-/* body {
-  height: 100vh;
-  height: 100dvh;
-
-} */
-
-/* leftSidebar */
+/* leftSidebar start */
 .nav {
   height: 100vh;
   height: 100dvh;
   z-index: 100;
-  top: 0;
   left: 0;
   color: white;
 }
@@ -346,11 +265,12 @@ textarea:focus {
 @media only screen and (max-width: 768px) {
   .nav {
     width: 100%;
+    height: 60px;
     background-color: #0a192f;
-    top: 90%;
     bottom: 0;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
   }
 }
 
@@ -362,4 +282,73 @@ textarea:focus {
   }
 }
 
-/* leftsidebar */
+/* leftSidebar end */
+
+
+
+/* service section start */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.cards-container.active {
+  grid-template-columns: repeat(6, 1fr);
+  transition: all 500ms ease;
+}
+
+.card {
+  background-color: transparent !important;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  grid-column: span 3;
+}
+
+.card>ul {
+  list-style: none;
+  display: none;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s linear;
+}
+
+.card>ul.active {
+  display: block;
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.5s linear;
+}
+
+.card p {
+  line-height: 2rem;
+  display: none;
+}
+
+.card .card-title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.card.active p {
+  display: block;
+}
+
+.card.active {
+  grid-column: 1 / span 6;
+  grid-row: 1;
+  order: 1;
+  height: auto;
+}
+
+.card.is-inactive {
+  grid-column: span 2;
+}
+
+/* service section end */

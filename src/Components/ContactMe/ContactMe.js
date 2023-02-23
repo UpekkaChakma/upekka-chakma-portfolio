@@ -26,7 +26,7 @@ const FormPage = () => {
     }
 
     return (
-        <MDBContainer size="xl" className="px-3 py-5 my-5" id="contact">
+        <MDBContainer size="xl" className="px-2 px-md-4 py-5 my-5" id="contact">
 
             <Modal modalIsOpen={modalIsOpen}
                 setModalIsOpen={setModalIsOpen}
@@ -52,16 +52,16 @@ const FormPage = () => {
                     </span>
                 </h6>
             </Flip>
-            <MDBRow center>
-                <MDBCol size="11" md="5" className="mt-2 mb-3">
-                    <div className="py-3 h-100 neumorphism d-none d-md-block" >
+            <MDBRow center className="neumorphism px-2 pb-3 pt-4 mx-0 mx-md-5">
+                <MDBCol size="11" md="6">
+                    <div className="neumorphism h-100 d-none d-md-block" >
                         <Zoom delay={2500}>
-                            {/* <iframe title="bangladesh-map" id="gmap_canvas" src="https://maps.google.com/maps?q=bangladesh&t=k&z=7&ie=UTF8&iwloc=&output=embed" frameBorder={0} className="w-100 h-100 radius-8p">
-                        </iframe> */}
+                            <iframe title="bangladesh-map" id="gmap_canvas" src="https://maps.google.com/maps?q=bangladesh&t=k&z=7&ie=UTF8&iwloc=&output=embed" frameBorder={0} className="w-100 h-100 radius-8p">
+                            </iframe>
                         </Zoom>
                     </div>
                 </MDBCol>
-                <MDBCol size="11" md="5" className="p-3 ml-md-4">
+                <MDBCol size="12" md="6">
                     <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
                         <Zoom delay={500}>
                             <input {...register("email", { required: true })}
@@ -86,7 +86,7 @@ const FormPage = () => {
                         </Zoom>
                         <Zoom delay={1100}>
                             <MDBBtn type="submit"
-                                className="text-capitalize w-100 p-2 mt-md-3 ml-0 font-700 rounded-lg"
+                                className="text-capitalize w-100 p-2 mt-md-3 ml-0 font-700 rounded-pill"
                                 color="primary" >
                                 <h5 className="mb-0 font-400">
                                     Submit <IoPaperPlane />

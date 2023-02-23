@@ -22,7 +22,7 @@ const MyRecord = () => {
             delay: 1700
         },
         {
-            number: '19',
+            number: '19+',
             details: 'Technologies Learned',
             delay: 2200
         },

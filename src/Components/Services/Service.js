@@ -1,54 +1,60 @@
-import { MDBCol, MDBContainer, MDBRow } from 'mdbreact';
-import React from 'react';
-import { TbBrandHtml5 } from "react-icons/tb";
-import { SlSocialGoogle, SlScreenTablet } from "react-icons/sl";
-import { HiOutlineServer } from "react-icons/hi2";
+import { MDBContainer } from 'mdbreact';
+import React, { useState } from 'react';
 import Fade from 'react-reveal/Fade';
-import Slide from 'react-reveal/Slide';
 import Flip from 'react-reveal/Flip';
+import Bounce from 'react-reveal/Bounce';
+import BackendCloud from '../../Images/backend-cloud.avif';
+import Computer from '../../Images/frontend-computer.webp';
+import Code from '../../Images/code.jpg';
+import SEO from '../../Images/seo.jpg';
 
 const Service = () => {
 
     const myServices = [
         {
-            Icon: SlScreenTablet,
-            alt: "front-end",
-            serviceName: "Front-End",
-            classList: 'p-1',
-            delay: 800,
-            specificList: [
-                "Modern Looking Website", "Responsive Design", "Better UI/UX", "All Modern Browser Support", "Lorem Ipsum", "Lorem2 Ipsum"
-            ]
-        },
-        {
-            Icon: HiOutlineServer,
+            img: BackendCloud,
             alt: "back-end",
-            serviceName: "Back-End",
+            title: "Back-End",
             delay: 1300,
-            specificList: [
+            specs: [
                 "Creating Restful API", "Authentication", "Maintaining best security practices", "CRUD Operations"
             ]
         },
         {
-            Icon: TbBrandHtml5,
+            img: Computer,
+            alt: "front-end",
+            title: "Front-End",
+            delay: 800,
+            specs: [
+                "Modern Looking Website", "Responsive Design", "Better UI/UX", "All Modern Browser Support"
+            ]
+        },
+        {
+            img: Code,
             alt: "html-5",
-            serviceName: "Any to HTML",
+            title: "Any to HTML",
             delay: 1700,
-            specificList: [
+            specs: [
                 "Converting Any Design To Webpage", "Pixel Perfect Design", "PSD & Figma To HTML", "A little design knowledge about Figma"
             ]
         },
         {
-            Icon: SlSocialGoogle,
+            img: SEO,
             alt: "search-engine-optimization",
-            serviceName: "SEO",
-            classList: 'p-1',
+            title: "SEO",
             delay: 2200,
-            specificList: [
+            specs: [
                 "Converting Any Design To Webpage", "Pixel Perfect Design", "PSD & Figma To HTML", "A little design knowledge about Figma"
             ]
         }
     ];
+
+    const [activeCard, setActiveCard] = useState('');
+
+    const toggleActiveCard = (name) => {
+        activeCard === name ? setActiveCard('') : setActiveCard(name);
+    }
+
 
 
     return (
@@ -73,31 +79,39 @@ const Service = () => {
                     </Flip>
                 </h6>
             </Flip>
-            <MDBRow center className='p-3'>
+            <div className={`mx-md-5 px-md-5 cards-container ${activeCard && 'active'}`}>
                 {
-                    myServices.map(({ serviceName, classList, specificList, Icon, alt, delay }) => (
-                        <MDBCol size="10" sm="4"
-                            key={alt}
-                            className='p-1 m-2 d-flex flex-column justify-content-center align-items-center py-4 neumorphism'>
-                            <Slide cascade bottom delay={delay} duration={400}>
-                                <Icon className={classList && classList} style={{ fontSize: "3rem", color: 'white' }} />
-                                <h5 className="text-white font-400 py-3">{serviceName}</h5>
-                            </Slide>
-                            {/* <ul className='list-none'>
-                    {
-                        specificList.map((list, index) => (
-                            <li key={index}>
-                                <h6 className="gradient-color-text gradient-4 mb-3 font-400">
-                                    {list}
-                                </h6>
-                            </li>
-                        ))
-                    }
-                </ul> */}
-                        </MDBCol>
+                    myServices.map(({ title, img, alt, delay }) => (
+                        <Bounce cascade delay={delay}>
+                            <div
+                                onClick={() => toggleActiveCard(title)}
+                                key={alt}
+                                className={`p-md-3 w-100 neumorphism card ${activeCard && activeCard === title ? 'active' : 'is-inactive'}`}>
+                                <div className="position-relative">
+                                    <img src={img}
+                                        alt={alt}
+                                        className='w-100 rounded-lg aspect-ratio-1 object-cover'
+                                    />
+                                    <h3 className="card-title text-center font-500 py-0 py-md-2">
+                                        {title}
+                                    </h3>
+                                </div>
+                                {/* <ul className={`${activeCard === title && 'active'}`}>
+                                    {
+                                        specs.map((list, index) => (
+                                            <li key={index}>
+                                                <span className="text-white text-center font-300">
+                                                    {list}
+                                                </span>
+                                            </li>
+                                        ))
+                                    }
+                                </ul> */}
+                            </div>
+                        </Bounce>
                     ))
                 }
-            </MDBRow>
+            </div>
         </MDBContainer>
     )
 }
