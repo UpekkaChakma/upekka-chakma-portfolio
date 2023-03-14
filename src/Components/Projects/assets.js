@@ -26,16 +26,16 @@ const projectGameShop = [
         img: gameShop1,
         title: "The Game Shop",
         secondTitle: 'MERN Full Stack app',
-        hrefLive: "dff",
-        hrefGithub: "ggh"
+        hrefLive: "https://the-game-shop-upek.web.app/",
+        hrefGithub: "https://github.com/UpekkaChakma/the-game-shop-client"
     },
     {
         id: 2,
         itemId: 2,
         img: gameShop2,
         features: ['Fully functional frontend and backend with crud', 'Admin can create/update/delete game data', 'User can buy video-game', 'Can not if already purchased'],
-        hrefLive: "dg",
-        hrefGithub: "sjhs"
+        hrefLive: "https://the-game-shop-upek.web.app/",
+        hrefGithub: "https://github.com/UpekkaChakma/the-game-shop-client"
     },
     {
         id: 3,
@@ -60,16 +60,16 @@ const projectJewelleryShop = [
         img: jewelleryShop1,
         title: "Jewellery Shop",
         secondTitle: 'MERN Full Stack app',
-        hrefLive: "ghh",
-        hrefGithub: "kjjh"
+        hrefLive: "https://jewellery-shop.vercel.app/",
+        hrefGithub: "https://github.com/UpekkaChakma/ecommerce-jewellery-shop-full-stack-with-stripe"
     },
     {
         id: 12,
         itemId: 2,
         img: jewelleryShop2,
         features: ['Functional frontend with context api', 'Backend with sanity so CRUD is easier', 'User can add multiple items at the same time', 'Has payment system with Stripe'],
-        hrefLive: "jh",
-        hrefGithub: "jhhk"
+        hrefLive: "https://jewellery-shop.vercel.app/",
+        hrefGithub: "https://github.com/UpekkaChakma/ecommerce-jewellery-shop-full-stack-with-stripe"
     },
     {
         id: 13,
@@ -94,8 +94,8 @@ const projectAddToCart = [
         img: addToCart1,
         title: "Add-To & Remove From Cart",
         secondTitle: 'Front End app with redux-toolkit',
-        hrefLive: "",
-        hrefGithub: ""
+        hrefLive: "https://add-to-cart-with-redux-toolkit.vercel.app",
+        hrefGithub: "https://github.com/UpekkaChakma/add-to-cart-with-redux-toolkit"
     },
     {
         id: 22,
@@ -112,8 +112,8 @@ const projectPlanDesign = [
         img: planDesign1,
         title: "Plan Design",
         secondTitle: 'Static HTML CSS page',
-        hrefLive: "",
-        hrefGithub: ""
+        hrefLive: "https://plan-ndesign-task-2.vercel.app",
+        hrefGithub: "https://github.com/UpekkaChakma/planNdesign-task-2"
     },
     {
         id: 32,
@@ -130,8 +130,8 @@ const projectPlanAndDesign = [
         img: planAndDesign1,
         title: "Plan & Design",
         secondTitle: 'Static HTML CSS page',
-        hrefLive: "",
-        hrefGithub: ""
+        hrefLive: "plan-ndesign-task-1.vercel.app",
+        hrefGithub: "https://github.com/UpekkaChakma/planNdesign-task-1"
     },
     {
         id: 42,

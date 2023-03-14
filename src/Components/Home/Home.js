@@ -21,13 +21,13 @@ const Home = () => {
                             </MDBCol>
                         </Zoom>
                     </MDBCol>
-                    <MDBCol size='12' md='6' className="my-4 my-md-2 d-md-block d-flex flex-column justify-content-center align-items-center">
+                    <MDBCol size='12' md='6' className="my-4 d-md-block d-flex flex-column justify-content-center align-items-center">
                         <Zoom delay={1000}>
-                            <h5 className="text-white mb-4 font-400">
+                            <h5 className="text-white mb-4 pb-md-1 font-400">
                                 Upekka Chakma
                             </h5>
                         </Zoom>
-                        <h6 style={{ color: "#00ccff" }} className="font-400 mb-4 text-white">
+                        <h6 style={{ color: "#00ccff" }} className="font-400 mb-4 pb-md-1 text-white">
                             <Typewriter
                                 options={{
                                     strings: ['Available for Work. Hire Me'],
@@ -36,9 +36,9 @@ const Home = () => {
                                 }}
                             />
                         </h6>
-                        <p style={{ maxWidth: '400px' }} className="lh-lg mb-4 text-white text-center text-md-left font-300">I am a junior web developer, currently dedicated myself to become even better in the web development field.</p>
+                        <p style={{ maxWidth: '400px' }} className="lh-lg mb-4 pb-md-1 text-white text-center text-md-left font-300">I am a junior web developer, currently dedicated myself to become even better in the web development field.</p>
 
-                        <div className="d-flex align-items-center text-white mb-3">
+                        <div className="d-flex align-items-center text-white mb-4 pb-md-1">
                             <Link to={{ pathname: "https://www.facebook.com/upekka.chakma/" }} target="_blank">
                                 <RiFacebookCircleLine style={{ fontSize: '1.4rem', color: 'white' }} />
                             </Link>

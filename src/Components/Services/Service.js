@@ -79,24 +79,25 @@ const Service = () => {
                     </Flip>
                 </h6>
             </Flip>
-            <div className={`mx-md-5 px-md-5 cards-container ${activeCard && 'active'}`}>
-                {
-                    myServices.map(({ title, img, alt, delay }) => (
-                        <Bounce cascade delay={delay}>
-                            <div
-                                onClick={() => toggleActiveCard(title)}
-                                key={alt}
-                                className={`p-md-3 w-100 neumorphism card ${activeCard && activeCard === title ? 'active' : 'is-inactive'}`}>
-                                <div className="position-relative">
-                                    <img src={img}
-                                        alt={alt}
-                                        className='w-100 rounded-lg aspect-ratio-1 object-cover'
-                                    />
-                                    <h3 className="card-title text-center font-500 py-0 py-md-2">
-                                        {title}
-                                    </h3>
-                                </div>
-                                {/* <ul className={`${activeCard === title && 'active'}`}>
+            <div className='d-flex justify-content-center'>
+                <div className={`mx-md-5 px-md-5 cards-container ${activeCard && 'active'}`}>
+                    {
+                        myServices.map(({ title, img, alt, delay }) => (
+                            <Bounce cascade delay={delay}>
+                                <div
+                                    onClick={() => toggleActiveCard(title)}
+                                    key={alt}
+                                    className={`p-md-2 w-100 neumorphism card ${activeCard && activeCard === title ? 'active' : 'is-inactive'}`}>
+                                    <div className="position-relative">
+                                        <img src={img}
+                                            alt={alt}
+                                            className='w-100 rounded-lg aspect-ratio-1 object-cover'
+                                        />
+                                        <h5 className="card-title text-center font-500 py-0 py-md-2">
+                                            {title}
+                                        </h5>
+                                    </div>
+                                    {/* <ul className={`${activeCard === title && 'active'}`}>
                                     {
                                         specs.map((list, index) => (
                                             <li key={index}>
@@ -107,10 +108,11 @@ const Service = () => {
                                         ))
                                     }
                                 </ul> */}
-                            </div>
-                        </Bounce>
-                    ))
-                }
+                                </div>
+                            </Bounce>
+                        ))
+                    }
+                </div>
             </div>
         </MDBContainer>
     )
